@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var SUBMIT_URL = "#";          // Confconnect portal — placeholder for now
+  var SUBMIT_URL = "#";          // Confconnect portal — single source of truth for ALL "Submit Paper" buttons site-wide. Update this one line when the portal opens.
   var PAPER_TEMPLATE = "https://www.intcommcon.com/wp-content/uploads/2021/03/Springer_template.docx";
   var PPT_TEMPLATE   = "https://www.intcommcon.com/wp-content/uploads/2025/10/ICCCE-2025-Presentation_Template.ppt";
   var CONF_DATE = "2026-11-21T09:00:00+05:30";
@@ -69,7 +69,7 @@
           '<span class="brand__year">2026</span>' +
         '</a>' +
         '<ul class="nav__menu">' + items +
-          '<li class="nav__item nav__cta"><a class="btn btn--primary btn--arrow" href="' + SUBMIT_URL + '">Submit Paper</a></li>' +
+          '<li class="nav__item nav__cta"><a class="btn btn--primary btn--arrow js-submit" href="' + SUBMIT_URL + '">Submit Paper</a></li>' +
         '</ul>' +
         '<button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">' +
           '<span></span><span></span><span></span></button>' +
@@ -95,7 +95,7 @@
         '<div><h4>Participate</h4><ul class="footer-links">' +
           '<li><a href="call-for-papers.html">Call for Papers</a></li>' +
           '<li><a href="registration.html">Registration</a></li>' +
-          '<li><a href="' + SUBMIT_URL + '">Submit Paper</a></li>' +
+          '<li><a class="js-submit" href="' + SUBMIT_URL + '">Submit Paper</a></li>' +
           '<li><a href="contact.html">Contact</a></li>' +
         "</ul></div>" +
         '<div><h4>Venue</h4><ul class="footer-links">' +
@@ -109,6 +109,21 @@
         "<span>November 21–22, 2026 · Hyderabad, India</span>" +
       "</div>" +
     "</div></footer>";
+  }
+
+  // ---- Submit-paper links (single source of truth: SUBMIT_URL) ----
+  // Points every element with class "js-submit" — inline page buttons plus the
+  // injected header/footer CTAs — at SUBMIT_URL, so the whole site updates from one line.
+  function wireSubmitLinks() {
+    var isExternal = SUBMIT_URL.indexOf("http") === 0;
+    var links = document.querySelectorAll(".js-submit");
+    for (var i = 0; i < links.length; i++) {
+      links[i].setAttribute("href", SUBMIT_URL);
+      if (isExternal) {
+        links[i].setAttribute("target", "_blank");
+        links[i].setAttribute("rel", "noopener");
+      }
+    }
   }
 
   // ---- Mobile menu ----
@@ -165,6 +180,7 @@
     var f = document.getElementById("site-footer");
     if (h) h.outerHTML = buildHeader();
     if (f) f.outerHTML = buildFooter();
+    wireSubmitLinks();
     wireMenu();
     wireCountdown();
   });
