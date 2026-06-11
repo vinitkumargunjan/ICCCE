@@ -6,8 +6,8 @@
   "use strict";
 
   var SUBMIT_URL = "#";          // Confconnect portal — single source of truth for ALL "Submit Paper" buttons site-wide. Update this one line when the portal opens.
-  var PAPER_TEMPLATE = "https://www.intcommcon.com/wp-content/uploads/2021/03/Springer_template.docx";
-  var PPT_TEMPLATE   = "https://www.intcommcon.com/wp-content/uploads/2025/10/ICCCE-2025-Presentation_Template.ppt";
+  var PAPER_TEMPLATE = "assets/templates/Springer-Paper-Template.docx";
+  var PPT_TEMPLATE   = "assets/templates/ICCCE-Presentation-Template.ppt";
   var CONF_DATE = "2026-11-21T09:00:00+05:30";
   var EMAIL = "iccceconferences@gmail.com";
 
