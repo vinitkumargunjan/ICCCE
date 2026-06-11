@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — ICCCE 2026</title>
+  <meta name="description" content="Contact the organizers of ICCCE 2026 at Vignan's Institute of Management and Technology for Women, Hyderabad." />
+  <meta name="theme-color" content="#0A1A2E" />
+  <!-- Favicons & app icons -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <!-- Social share (set your real domain on the og:image/og:url before launch) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact — ICCCE 2026" />
+  <meta property="og:description" content="Contact the organizers of ICCCE 2026 at Vignan's Institute of Management and Technology for Women, Hyderabad." />
+  <meta property="og:image" content="https://YOUR-DOMAIN/assets/img/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — ICCCE 2026" />
+  <meta name="twitter:description" content="Contact the organizers of ICCCE 2026 at Vignan's Institute of Management and Technology for Women, Hyderabad." />
+  <meta name="twitter:image" content="https://YOUR-DOMAIN/assets/img/og-cover.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+  <main id="main">
+    <header class="page-head">
+      <div class="page-head__wave js-wave"></div>
+      <div class="container">
+        <div class="crumb"><a href="index.html">Home</a> / Contact</div>
+        <h1>Contact Us</h1>
+        <p>Questions about submission, registration, or the programme? Reach the ICCCE 2026 organizing team.</p>
+      </div>
+    </header>
+
+    <section class="section section--paper">
+      <div class="container">
+        <div class="split">
+          <div>
+            <div class="contact-card">
+              <div class="role">Convener · ICCCE 2026</div>
+              <h3>Vignan's Institute of Management and Technology for Women</h3>
+              <div class="contact-row">
+                <span class="lbl">Address</span>
+                <span class="val">Kondapur, Ghatkesar, Hyderabad, Telangana 501301, India</span>
+              </div>
+              <div class="contact-row">
+                <span class="lbl">Email</span>
+                <span class="val"><a href="mailto:iccceconferences@gmail.com">iccceconferences@gmail.com</a></span>
+              </div>
+              <div class="contact-row">
+                <span class="lbl">Submit</span>
+                <span class="val">Via the Confconnect portal — <a href="#">submission link</a> (opens 1 Jul 2026)</span>
+              </div>
+            </div>
+
+            <div class="contact-card" style="margin-top:20px">
+              <div class="role">Send a Message</div>
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input id="cf-name" type="text" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="cf-email">Your email</label>
+                <input id="cf-email" type="email" autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="cf-msg">Message</label>
+                <textarea id="cf-msg" rows="5"></textarea>
+              </div>
+              <button class="btn btn--primary btn--arrow" id="cf-send" type="button">Send message</button>
+              <p id="cf-note" style="margin:12px 0 0;color:var(--muted);font-size:.88rem">This opens your email app addressed to the organizers.</p>
+            </div>
+          </div>
+
+          <div class="map-frame">
+            <iframe
+              title="Map to Vignan's Institute of Management and Technology for Women, Hyderabad"
+              src="https://maps.google.com/maps?q=Vignan%27s%20Institute%20of%20Management%20and%20Technology%20for%20Women%2C%20Hyderabad&t=m&z=14&output=embed&iwloc=near"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var btn = document.getElementById("cf-send");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var name = encodeURIComponent(document.getElementById("cf-name").value || "");
+        var email = document.getElementById("cf-email").value || "";
+        var msg = document.getElementById("cf-msg").value || "";
+        var subject = encodeURIComponent("ICCCE 2026 enquiry from " + decodeURIComponent(name));
+        var body = encodeURIComponent(msg + "\n\n— " + decodeURIComponent(name) + " (" + email + ")");
+        window.location.href = "mailto:iccceconferences@gmail.com?subject=" + subject + "&body=" + body;
+      });
+    })();
+  </script>
+</body>
+</html>
