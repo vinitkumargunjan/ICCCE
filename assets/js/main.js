@@ -6,7 +6,7 @@
   "use strict";
 
   var SUBMIT_URL = "#";          // Confconnect portal — single source of truth for ALL "Submit Paper" buttons site-wide. Update this one line when the portal opens.
-  var PAPER_TEMPLATE = "assets/templates/Springer-Paper-Template.docx";
+  var PAPER_TEMPLATE = "assets/templates/Publisher-Paper-Template.docx";
   var PPT_TEMPLATE   = "assets/templates/ICCCE-Presentation-Template.ppt";
   var CONF_DATE = "2026-11-21T09:00:00+05:30";
   var EMAIL = "iccceconferences@gmail.com";
@@ -25,7 +25,7 @@
     ]},
     { label: "Registration", page: "registration", children: [
       { label: "Registration & Fees", href: "registration.html", page: "registration" },
-      { label: "Paper Template (Springer)", href: PAPER_TEMPLATE },
+      { label: "Manuscript Template", href: PAPER_TEMPLATE },
       { label: "Presentation Template", href: PPT_TEMPLATE }
     ]},
     { label: "Contact", href: "contact.html", page: "contact" }
