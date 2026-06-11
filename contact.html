@@ -55,23 +55,30 @@
               </div>
             </div>
 
-            <div class="contact-card" style="margin-top:20px">
+            <form class="contact-card" style="margin-top:20px" action="https://formsubmit.co/iccceconferences@gmail.com" method="POST">
               <div class="role">Send a Message</div>
+              <!-- FormSubmit configuration -->
+              <input type="hidden" name="_subject" value="New ICCCE 2026 enquiry" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://www.intcommcon.com/contact.html" />
+              <!-- Honeypot anti-spam field (must stay empty; hidden from humans) -->
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
               <div class="field">
                 <label for="cf-name">Name</label>
-                <input id="cf-name" type="text" autocomplete="name" />
+                <input id="cf-name" name="name" type="text" autocomplete="name" required />
               </div>
               <div class="field">
                 <label for="cf-email">Your email</label>
-                <input id="cf-email" type="email" autocomplete="email" />
+                <input id="cf-email" name="email" type="email" autocomplete="email" required />
               </div>
               <div class="field">
                 <label for="cf-msg">Message</label>
-                <textarea id="cf-msg" rows="5"></textarea>
+                <textarea id="cf-msg" name="message" rows="5" required></textarea>
               </div>
-              <button class="btn btn--primary btn--arrow" id="cf-send" type="button">Send message</button>
-              <p id="cf-note" style="margin:12px 0 0;color:var(--muted);font-size:.88rem">This opens your email app addressed to the organizers.</p>
-            </div>
+              <button class="btn btn--primary btn--arrow" type="submit">Send message</button>
+              <p id="cf-note" style="margin:12px 0 0;color:var(--muted);font-size:.88rem">Your message is sent straight to the ICCCE 2026 organizers.</p>
+            </form>
           </div>
 
           <div class="map-frame">
@@ -86,19 +93,5 @@
   </main>
   <div id="site-footer"></div>
   <script src="assets/js/main.js"></script>
-  <script>
-    (function () {
-      var btn = document.getElementById("cf-send");
-      if (!btn) return;
-      btn.addEventListener("click", function () {
-        var name = encodeURIComponent(document.getElementById("cf-name").value || "");
-        var email = document.getElementById("cf-email").value || "";
-        var msg = document.getElementById("cf-msg").value || "";
-        var subject = encodeURIComponent("ICCCE 2026 enquiry from " + decodeURIComponent(name));
-        var body = encodeURIComponent(msg + "\n\n— " + decodeURIComponent(name) + " (" + email + ")");
-        window.location.href = "mailto:iccceconferences@gmail.com?subject=" + subject + "&body=" + body;
-      });
-    })();
-  </script>
 </body>
 </html>
