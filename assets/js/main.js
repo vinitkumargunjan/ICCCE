@@ -99,8 +99,8 @@
           '<li><a href="contact.html">Contact</a></li>' +
         "</ul></div>" +
         '<div><h4>Venue</h4><ul class="footer-links">' +
-          "<li>Vignan's Institute of Management and Technology for Women</li>" +
-          "<li>Hyderabad, Telangana, India</li>" +
+          "<li>Joginpally B.R. Engineering College (UGC Autonomous)</li>" +
+          "<li>Moinabad, Hyderabad, Telangana, India</li>" +
           '<li><a href="mailto:' + EMAIL + '">' + EMAIL + "</a></li>" +
         "</ul></div>" +
       "</div>" +
