@@ -106,6 +106,7 @@
       "</div>" +
       '<div class="footer-bottom">' +
         "<span>© " + y + " ICCCE. All rights reserved.</span>" +
+        '<span class="footer-legal"><a href="privacy.html">Privacy</a> · <a href="refund.html">Refund</a> · <a href="terms.html">Terms</a></span>' +
         "<span>November 21–22, 2026 · Hyderabad, India</span>" +
       "</div>" +
     "</div></footer>";
