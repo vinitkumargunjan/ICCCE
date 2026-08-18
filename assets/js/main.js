@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var SUBMIT_URL = "#";          // Confconnect portal — single source of truth for ALL "Submit Paper" buttons site-wide. Update this one line when the portal opens.
+  var SUBMIT_URL = "https://app.confconnects.com/conference/YiNIueXuvrWsk7e8DwSm";  // Confconnect portal — single source of truth for ALL "Submit Paper" buttons site-wide.
   var PAPER_TEMPLATE = "assets/templates/Publisher-Paper-Template.docx";
   var PPT_TEMPLATE   = "assets/templates/ICCCE-Presentation-Template.ppt";
   var CONF_DATE = "2026-11-21T09:00:00+05:30";
